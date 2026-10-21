@@ -12,9 +12,18 @@
       <ion-title size="large">Blank</ion-title>
     </ion-toolbar>
   </ion-header>
+<h3>Listado de Clientes</h3>
+<ion-list> @for (proveedor of proveedores; track proveedor.id) {
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <ion-item>
+      <ion-label>
+        <h2>{{ client.nombre }}</h2>
+        <p>{{ client.empresa }} | {{ client.email }}</p>
+      </ion-label>
+    </ion-item>
+  }
+  </ion-list>
 </ion-content>
+
+
+
